@@ -69,7 +69,6 @@ from sklearn.ensemble import RandomForestClassifier
 #Defining an image
 w1 = Image.open("Pictuure.png")
 
-init_notebook_mode(connected = "true")
 header=st.container()
 data=st.container()
 
@@ -89,7 +88,7 @@ choose = option_menu(None, ["Home", "Upload",'Data Exploration','Predictions & I
 backgroundColor = "#161515"
 #Our home page + adding a background
 if choose == "Home": 
-       main_bg_ext = r"Picture5.png"
+       main_bg_ext = "Picture5.png"
         
        st.markdown(
          f"""
@@ -115,7 +114,7 @@ if choose == "Home":
 if choose == "Upload":
     col11, col22,col33= st.columns([0.3,0.2,0.5])
     with col11:
-       main_bg_ext1=r"Picture5.png"
+       main_bg_ext1="Picture5.png"
 
        st.markdown(
          f"""
