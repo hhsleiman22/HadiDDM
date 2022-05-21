@@ -12,14 +12,12 @@ import numpy as np
 import base64
 import pandas as pd
 from re import T
-import matplotlib.pyplot as plt
 import plotly.express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from plotly.offline import init_notebook_mode
-import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import FunctionTransformer
 from sklearn.model_selection import train_test_split
