@@ -12,7 +12,7 @@ import numpy as np
 import base64
 import pandas as pd
 from re import T
-import plotly.express as px
+from plotly import express as px
 from PIL import Image
 from streamlit_option_menu import option_menu
 from plotly.subplots import make_subplots
