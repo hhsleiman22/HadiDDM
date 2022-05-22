@@ -162,10 +162,10 @@ if choose == "Upload":
 
 # Third page 
 if choose == "Data Exploration":
-    col111, col222,col333,col444,col555= st.columns([0.05,0.3,0.1,0.3,0.1])
-    with col111:
-        st.write("")
+    col111, col222,col333,col444,col555= st.columns([0.4,0.1,0.1,0.4])
     with col222:
+        st.write("")
+    with col111:
        df = pd.read_csv(r"hotel_bookings.csv")
        main_bg_ext2=r"Picture5.png"
 
