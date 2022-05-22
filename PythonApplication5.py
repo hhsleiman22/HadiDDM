@@ -184,14 +184,13 @@ if choose == "Data Exploration":
        #First visual ( Cancelation rate)
        df2 = df['is_canceled1'].value_counts()
        df2 = pd.DataFrame({'is_canceled1':df2.index, 'freq':df2.values})
-       bar2=px.bar(df2, x="is_canceled1", y="freq",color="is_canceled1",labels={'freq':'Number of Cancellations','is_canceled1':'Canceled'}, height = 350)
-       plt.title('Cancelations')
+       bar2=px.bar(df2, x="is_canceled1", y="freq",color="is_canceled1",labels={'freq':'Number of Cancellations','is_canceled1':'Canceled'}, height = 250)
        st.write(bar2)
 
        #Second visual (Cancellation rate per Hotel)
        df4 = df.loc[df.is_canceled==1, 'hotel'].value_counts()
        df4 = pd.DataFrame({'hotel':df4.index, 'freq':df4.values})
-       bar4=px.bar(df4, x="hotel", y="freq", color="hotel",labels={'freq':'Number of Cancellations'}, height = 350) 
+       bar4=px.bar(df4, x="hotel", y="freq", color="hotel",labels={'freq':'Number of Cancellations'}, height = 250) 
        st.write(bar4)  
        st.write("")
        st.write("")
@@ -223,7 +222,7 @@ if choose == "Data Exploration":
        #third visual (bookings per year)
        df3 = df['arrival_date_year'].value_counts(normalize = True)
        df3 = pd.DataFrame({'arrival_date_year':df3.index, 'freq':df3.values})
-       bar3=px.bar(df3, x="arrival_date_year", y="freq", color="arrival_date_year", labels={'freq':'Number of Bookings','arrival_date_year':'Year'}, height = 350)
+       bar3=px.bar(df3, x="arrival_date_year", y="freq", color="arrival_date_year", labels={'freq':'Number of Bookings','arrival_date_year':'Year'}, height = 250)
        st.write(bar3) 
        
 
@@ -232,7 +231,7 @@ if choose == "Data Exploration":
        #forth visual (bookings per month)
        df1 = df.loc[df.is_canceled==1, 'arrival_date_month'].value_counts(normalize = True).reindex(month_ndx)
        df1 = pd.DataFrame({'month':df1.index, 'freq':df1.values})
-       bar=px.bar(df1, x="month", y="freq",color="month",labels={'freq':'Number of Bookings'}, height = 350)
+       bar=px.bar(df1, x="month", y="freq",color="month",labels={'freq':'Number of Bookings'}, height = 250)
        st.write(bar)     
     with col555:
        st.write("")
