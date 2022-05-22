@@ -162,7 +162,7 @@ if choose == "Upload":
 
 # Third page 
 if choose == "Data Exploration":
-    col111, col222,col333,col444,col555= st.columns([0.4,0.1,0.1,0.4])
+    col111, col222,col333,col444= st.columns([0.4,0.1,0.1,0.4])
     with col222:
         st.write("")
     with col111:
@@ -233,8 +233,6 @@ if choose == "Data Exploration":
        df1 = pd.DataFrame({'month':df1.index, 'freq':df1.values})
        bar=px.bar(df1, x="month", y="freq",color="month",labels={'freq':'Number of Bookings'}, height = 250)
        st.write(bar)     
-    with col555:
-       st.write("")
 
 #Last page
 if choose == "Predictions & Insights":
